@@ -8,10 +8,7 @@ pipeline {
 			 bat 'mvn clean install'
                
             }
-			post{
-			 echo 'Archiving the Artifacts...'
-			 archiveArtifacts artifacts::'**/target/*.jar'
-			}
+			
         }
 		stage('Deploy to Tomcate server') {
             steps {
