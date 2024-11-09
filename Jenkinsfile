@@ -13,7 +13,7 @@ pipeline {
 		stage('Deploy to Tomcate server') {
             steps {
                 echo 'Deploy to Tomcate server.....'
-				deploy adapters: [tomcat10(credentialsId: 'TEST_USER_CRE', path: '', url: 'http://localhost:8080')], contextPath: null, war: '**/*.war'
+				deploy adapters: [tomcat9(credentialsId: 'TOMCAT', path: '', url: 'http://localhost:8080/')], contextPath: null, war: '**/*.war'
             }
         }
     }
