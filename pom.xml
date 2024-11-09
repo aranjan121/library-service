@@ -34,6 +34,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<scop>provided</scop>
 		</dependency>
 
 		<dependency>
@@ -49,6 +50,7 @@
 	</dependencies>
 
 	<build>
+	<finalName>${artifactId}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
